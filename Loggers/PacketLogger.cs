@@ -29,9 +29,9 @@ namespace SamplePacketDispatcher.Loggers
         void IPacketLogger.LogPacket(PacketLogReason reason, Guid correlationId, IPacket packet)
         {
             _logger.Information(
-                "PACKET LOG: CID:{correlationId} {type} {id} {@data}",
-                packet.GetType().Name,
+                "PACKET LOG: CID:{correlationId} TYPE:{type} ID:{id} DATA:{@data}",
                 correlationId.ToString(),
+                packet.GetType().Name,
                 packet.Id,
                 packet.Data);
         }

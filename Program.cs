@@ -99,7 +99,7 @@ namespace SamplePacketDispatcher
                 catch (Exception ex)
                 {
                     Guid correlationId = Guid.NewGuid();
-                    Log.Error(ex, "{correlationId}: Exception invoking packet dispatcher: {id} {type}", correlationId, packet?.Id, packet?.GetType().Name);
+                    Log.Error(ex, "CID:{correlationId}: Exception invoking dispatcher for packet with id {id} and type {type}", correlationId, packet?.Id, packet?.GetType().Name);
                     packetLogger.LogPacket(PacketLogReason.Error, correlationId, packet);
                 }
             }
