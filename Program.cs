@@ -80,7 +80,7 @@ namespace SamplePacketDispatcher
         /// by terminating any outstanding dispatches and terminating the waits on any
         /// incoming packets.
         /// </remarks>
-        private static async Task ProcessPacketsAsync(
+        static async Task ProcessPacketsAsync(
             IPacketDispatcher dispatcher,
             IPacketLogger packetLogger,
             CancellationToken cancellationToken)
@@ -108,7 +108,7 @@ namespace SamplePacketDispatcher
         /// <summary>
         /// This is a sample packet source, assumed to be asynchronous and producing fully-formed packets.
         /// </summary>
-        private static async IAsyncEnumerable<IPacket> GeneratePacketsAsync([EnumeratorCancellation] CancellationToken cancellationToken)
+        static async IAsyncEnumerable<IPacket> GeneratePacketsAsync([EnumeratorCancellation] CancellationToken cancellationToken)
         {
             var testData = new byte[] { 1, 2, 3 };
             var packets = new[] {

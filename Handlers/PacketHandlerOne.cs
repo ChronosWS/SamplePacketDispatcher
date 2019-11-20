@@ -10,7 +10,7 @@ namespace SamplePacketDispatcher.Handlers
     /// </summary>
     public class PacketHandlerOne : IPacketHandler
     {
-        const int PacketId = 1;
+        private const int PacketId = 1;
 
         private readonly ILogger _logger;
 

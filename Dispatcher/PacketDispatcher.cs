@@ -11,9 +11,10 @@ namespace SamplePacketDispatcher.Dispatcher
     /// The packet dispatcher
     /// </summary>
     /// <remarks>
-    /// The dispatcher acquires is packet handlers from dependency injection, and maps packets
-    /// to their handlers by way of a dictionay (from id => handler). Registering a handler 
-    /// for the same ID twice results in a run-time exception.
+    /// The dispatcher acquires its packet handlers from dependency injection, and maps packets
+    /// to their handlers by way of a dictionary (from id => handler). Registering a handler
+    /// for the same ID twice results in an intentional run-time exception as the system is
+    /// considered to be mis-configured.
     /// </remarks>
     public class PacketDispatcher : IPacketDispatcher
     {

@@ -12,7 +12,7 @@ namespace SamplePacketDispatcher.Handlers
     /// </summary>
     public class PacketHandlerTwo : IPacketHandler
     {
-        const int PacketId = 2;
+        private const int PacketId = 2;
 
         private readonly ILogger _logger;
 
